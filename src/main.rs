@@ -44,8 +44,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         };
         // TODO: listen to log file changes and update the location
 
-        let details: &str =
-            &(format!("Lvl {} {}", character.level, character.ascendancy).to_string());
+        let details = &(format!("Lvl {} {}", character.level, character.ascendancy).to_string());
 
         let timestamps = activity::Timestamps::new().start(app_start_unix_timestamp as i64);
 
